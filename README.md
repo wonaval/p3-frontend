@@ -1,7 +1,7 @@
 # PROJECT TITLE: TBA
 
 ### OVERVIEW
-<p>Summarize the goals of your app, and describe the problem your app is built to solve.</p>
+<p>Personal dashboard that aggregates all the information you need for the day. Contains weather (api), upcoming events/to-do-list, notes section</p>
 
 ---
 
