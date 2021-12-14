@@ -62,15 +62,14 @@
 ### MVP CHECKLIST
 - [ ] Create user
 - [ ] Login/logout user
-- [ ] Pull, display, and reload quote from API
+- [ ] Update account information
 - [ ] Pull, display, and reload weather from API
-- [ ] Add, show, delete notes
 - [ ] Add, show, delete events
 
 ---
 
 ### STRETCH GOALS
-- [ ] Update account information
+- [ ] Add, show, delete notes
 - [ ] Editable notes and events
 - [ ] Configurable sections based upon setting choices by user
 - [ ] Password hashing and account information encryption
