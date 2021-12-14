@@ -17,6 +17,10 @@
 
 ### ROUTE INVENTORY
 <p>List all the routes you plan to have in your backend. Include the http verb, the path, and a brief summary of what the route does. (To represent this nicely in markdown, you might want to look up how to make a table in a markdown file!)</p>
+| --- | --- | --- |
+| PATH | ROUTE | Description |
+| :---: | :---: | :--- |
+| TEST | TEST | Placeholder |
 
 ---
 
