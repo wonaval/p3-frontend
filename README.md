@@ -71,6 +71,7 @@
 ### STRETCH GOALS
 - [ ] Add, show, delete notes
 - [ ] Editable notes and events
+- [ ] Pull, display, and reload quote from API
 - [ ] Configurable sections based upon setting choices by user
 - [ ] Password hashing and account information encryption
 - [ ] Dark mode/Light mode
