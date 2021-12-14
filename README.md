@@ -11,8 +11,10 @@
 
 
 
-REQUIREMENTS:
-Your pitch is due Tuesday 12/14/21 by noon PST. Make two repos for this project in your own personal github, one for the frontend and one for the backend. Make a README.md in either one; this README will contain your pitch. Your README should contain:
+# P3 REQUIREMENTS:
+<p>Your pitch is due Tuesday 12/14/21 by noon PST. Make two repos for this project in your own personal github, one for the frontend and one for the backend. Make a README.md in either one; this README will contain your pitch.</p>
+
+### Your README should contain:
 
 <p>Title of the project (biggest header in the document)</p>
 
