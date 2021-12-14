@@ -34,10 +34,10 @@
 
 | Route | Path | Description |
 | :---: | :--- | :--- |
-| POST | /users | Create new user |
-| POST | /users/update | Update user information |
-| GET | /users | Get user and settings |
-| DELETE | /users | Delete user |
+| POST | /user | Create new user |
+| POST | /user/update | Update user information |
+| GET | /user | Get user and settings |
+| DELETE | /user | Delete user |
 | POST | /note | Create note |
 | GET | /note | Get all notes |
 | DELETE | /note | Delete notes |
