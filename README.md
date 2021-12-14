@@ -15,8 +15,18 @@
 ---
 
 ### USER STORIES
-- When I
-- When I
+- When I first visit, I am shown a homepage with site description.
+- When I click on signup/login, I am taken to the login page to login
+- When I click on the "Get Started" button or the "Don't have an account?" link? on the login page, I am taken to the signup page to enter my information
+- After logging in, I am taken to the dashboard which shows my name, current date, an inspiration quote, weather, notes, and a calendar/task list
+- When click on any of the cogs for the header, I am able to edit the name in the header
+- When I click on any of the reload buttons for quote section, I will be able to see a new quote
+- When I click on the reload for the weather section, I am able to get updated weather information
+- When I expand the weather section, I am shown more weather detail
+- When I expand the notes section, I will be able to add or delete notes
+- When I expand the calendar/task list section, I am able to add, delete, or mark an event/task as completed
+- When I click on the account link, I am taken to my account information and am able to delete my account
+- When I click on the logout link, I am logged out and taken to the home page
 
 ---
 
@@ -24,13 +34,17 @@
 <p>List all the routes you plan to have in your backend. Include the http verb, the path, and a brief summary of what the route does. (To represent this nicely in markdown, you might want to look up how to make a table in a markdown file!)</p>
 
 | Route | Path | Description |
-| :---: | :---: | :--- |
+| :---: | :--- | :--- |
 | POST | /users | Create new user |
+| POST | /users/update | Update user information |
 | GET | /users | Get user and settings |
 | DELETE | /users | Delete user |
-| POST | /users/update | Update user information |
-| /N
-|
+| POST | /note | Create note |
+| GET | /note | Get all notes |
+| DELETE | /note | Delete notes |
+| POST | /event | Create event |
+| GET | /event | Get all events |
+| DELETE | /event | Delete event |
 
 ---
 
@@ -40,20 +54,23 @@
 ---
 
 ### COMPONENT TREE
-<p>Diagram out your component hierarchy, indicating which components are parents/children of which others. Indicate which components hold which pieces of state, and which props are passed to each child.</p>
+![Component Tree](./assets/P3-Comp-Tree.jpg)
 
 ---
 
 ### MVP CHECKLIST
-- [ ] Create account
-- [ ] Login to account
-- [ ] Pull and display quote
-- [ ] Pull and display Weather
-- [ ]
+- [ ] Create user
+- [ ] Login/logout user
+- [ ] Pull, display, and reload quote from API
+- [ ] Pull, display, and reload weather from API
+- [ ] Add, show, delete notes
+- [ ] Add, show, delete events
 
 ---
 
 ### STRETCH GOALS
-- [ ] Show/Hide sections based upon settings
+- [ ] Update account information
+- [ ] Editable notes and events
+- [ ] Configurable sections based upon setting choices by user
 - [ ] Password hashing and account information encryption
-- [ ]
+- [ ] Dark mode/Light mode
