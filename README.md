@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PROJECT TITLE: TBA
 
 ---
