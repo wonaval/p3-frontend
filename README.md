@@ -6,7 +6,10 @@
 ---
 
 ### WIREFRAME
-![Wireframe](./assets/WF.jpg)
+![Wireframe 1 of 4](./assets/WF1.jpg)
+![Wireframe 2 of 4](./assets/WF2.jpg)
+![Wireframe 3 of 4](./assets/WF3.jpg)
+![Wireframe 4 of 4](./assets/WF4.jpg)
 
 
 ---
@@ -32,7 +35,7 @@
 ---
 
 ### DATABASE ERD
-<p>Diagram all your tables, columns, and associations. You can use a tool like this https://app.dbdesigner.net/designer/schema/new, and screencap the image.</p>
+![ERD](./assets/P3-ERD.png)
 
 ---
 
@@ -42,25 +45,15 @@
 ---
 
 ### MVP CHECKLIST
-<p>List of all the functionalities that will constitute the bare minimum version of your app. Note that this list should be sized so that you can complete it by ~Monday, leaving Tuesday to tackle stretch goals.</p>
+- [ ] Create account
+- [ ] Login to account
+- [ ] Pull and display quote
+- [ ] Pull and display Weather
+- [ ]
 
 ---
 
 ### STRETCH GOALS
-<p>List of awesome bonus goals you will work on after completing your MVP.</p>
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [ ] Show/Hide sections based upon settings
+- [ ] Password hashing and account information encryption
+- [ ]
