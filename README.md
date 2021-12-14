@@ -5,26 +5,29 @@
 
 ---
 
-### WIREFRAMES
-![Wireframe 1 of 4](/asssets/WF1.jps)
-![Wireframe 2 of 4](/asssets/WF2.jps)
-![Wireframe 3 of 4](/asssets/WF3.jps)
-![Wireframe 4 of 4](/asssets/WF4.jps)
+### WIREFRAME
+![Wireframe](./assets/WF.jpg)
 
 
 ---
 
 ### USER STORIES
-<p>Series of statements in the form of "When I {do X}, {Y happens}." These statements should encompass the whole functionality of your app.</p>
+- When I
+- When I
 
 ---
 
 ### ROUTE INVENTORY
 <p>List all the routes you plan to have in your backend. Include the http verb, the path, and a brief summary of what the route does. (To represent this nicely in markdown, you might want to look up how to make a table in a markdown file!)</p>
 
-| PATH | ROUTE | Description |
+| Route | Path | Description |
 | :---: | :---: | :--- |
-| TEST | TEST | Placeholder |
+| POST | /users | Create new user |
+| GET | /users | Get user and settings |
+| DELETE | /users | Delete user |
+| POST | /users/update | Update user information |
+| /N
+|
 
 ---
 
