@@ -6,7 +6,11 @@
 ---
 
 ### WIREFRAMES
-<p>Use a tool like https://awwapp.com/, https://www.mockflow.com/, or good ol zoom whiteboard to create wireframes for your project. Take a screenshot and link to the images in your readme. Your wireframes should walk the reader through the screen states, and should include short descriptions of each screen. It's a good idea to give your wireframes labels (like 1, 2, 3 etc), and to indicate which screens transitions to which other screens.</p>
+![Wireframe 1 of 4](/asssets/WF1.jps)
+![Wireframe 2 of 4](/asssets/WF2.jps)
+![Wireframe 3 of 4](/asssets/WF3.jps)
+![Wireframe 4 of 4](/asssets/WF4.jps)
+
 
 ---
 
