@@ -18,7 +18,7 @@ const SignUp = () => {
       e.preventDefault();
       // Temporarily set 'location' as false
       const location = false;
-      const response = await axios.post(`${process.env.BACKEND_URL}/user`, {first, last, email, password, location})
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user`, {first, last, email, password, location})
       // Console log response from backend
       console.log({response})
       // Set user state
