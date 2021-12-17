@@ -1,3 +1,9 @@
-.App {
+.Dashboard {
   text-align: center;
+}
+
+.signupForm form{
+  display: flex;
+  flex-direction: column;
+  
 }

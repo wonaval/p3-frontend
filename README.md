@@ -2,12 +2,12 @@
 
 ---
 
-### OVERVIEW
+## OVERVIEW
 <p>Personal dashboard that aggregates all the information you need for the day. Contains weather (api), upcoming events/to-do-list, notes section</p>
 
 ---
 
-### WIREFRAME
+## WIREFRAME
 ![Wireframe 1 of 4](./assets/WF1.jpg)
 ![Wireframe 2 of 4](./assets/WF2.jpg)
 ![Wireframe 3 of 4](./assets/WF3.jpg)
@@ -16,7 +16,7 @@
 
 ---
 
-### USER STORIES
+## USER STORIES
 - When I first visit, I am shown a homepage with site description.
 - When I click on signup/login, I am taken to the login page to login
 - When I click on the "Get Started" button or the "Don't have an account?" link? on the login page, I am taken to the signup page to enter my information
@@ -32,34 +32,53 @@
 
 ---
 
-### ROUTE INVENTORY
+## ROUTE INVENTORY
 
-| Route | Path | Description |
-| :---: | :--- | :--- |
-| POST | /user | Create new user |
-| PUT | /user/update | Update user information |
-| GET | /user | Get user and settings |
-| DELETE | /user | Delete user |
-| POST | /note | Create note |
-| GET | /note | Get all notes |
-| DELETE | /note | Delete notes |
-| POST | /event | Create event |
-| GET | /event | Get all events |
-| DELETE | /event | Delete event |
 
+### /user Routes
+| Route  | Path      | Description      |
+| :---:  | :---      | :---             |
+| POST   | /user     | Create new user  |
+| PUT    | /user/:id | Update user info |
+| GET    | /user     | Get user info    |
+| DELETE | /user     | Delete user      |
+
+### /config Routes
+
+| Route  | Path      | Description      |
+| :---:  | :---      | :---             |
+| PUT    | /config   | Update location  |
+| GET    | /config   | Get location     |
+| DELETE | /config   | Delete location  |
+
+### /event Routes
+
+| Route  | Path      | Description      |
+| :---:  | :---      | :---             |
+| POST   | /event    | Create event     |
+| GET    | /event    | Get all events   |
+| DELETE | /event    | Delete event     |
+
+### /note Routes (Stretch Goal)
+
+| Route  | Path      | Description      |
+| :---:  | :---      | :---             |
+| POST   | /note     | Create note      |
+| GET    | /note     | Get all notes    |
+| DELETE | /note     | Delete notes     |
 ---
 
-### DATABASE ERD
+## DATABASE ERD
 ![ERD](./assets/P3-ERD.png)
 
 ---
 
-### COMPONENT TREE
+## COMPONENT TREE
 ![Component Tree](./assets/P3-Comp-Tree.jpg)
 
 ---
 
-### MVP CHECKLIST
+## MVP CHECKLIST
 - [ ] Create user
 - [ ] Login/logout user
 - [ ] Update account information
@@ -68,7 +87,7 @@
 
 ---
 
-### STRETCH GOALS
+## STRETCH GOALS
 - [ ] Add, show, delete notes
 - [ ] Editable notes and events
 - [ ] Pull, display, and reload quote from API
