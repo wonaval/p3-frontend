@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import axios from 'axios'
+import env from 'react-dotenv'
 
 const SignUp = () => {
   // useState
@@ -11,15 +13,16 @@ const SignUp = () => {
 
   // Component Functions
   // Create user on backend
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
     try {
+      e.preventDefault();
       // Temporarily set 'location' as false
       const location = false;
-      const response = await axios.post('http://localhost:3001/user', {first, last, email, password, location})
+      const response = await axios.post(`${env.BACKEND_URL}/user`, {first, last, email, password, location})
       // Console log response from backend
       console.log({response})
       // Set user state
-      setUser([...response.data.user])
+      setUser(response.data.user)
       // Set localstorage with user id
       localStorage.setItem('userId', response.data.user.id)
     } catch (error) {
