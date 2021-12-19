@@ -17,7 +17,7 @@ const Weather = () => {
   const longitude = -71.0715
   // ***** REMOVE BEFORE PRODUCTION *****
 
-  const api_key = env.REACT_APP_BACKEND_API_KEY
+  const api_key = env.REACT_APP_API_KEY
   const units = 'imperial'
 
   // useContext
@@ -26,12 +26,11 @@ const Weather = () => {
 
   // useState
   const [ weather, setWeather ] = useState({})
-  const [ forecast, setForecast ] = useState({})
+  const [ forecast, setForecast ] = useState([])
 
   // useEffect - On load
   useEffect(()=>{
-    // getWeather()
-      console.log('API_KEY', api_key, process.env.REACT_APP_BACKEND_API_KEY)
+    getWeather()
   },[])
 
   // useEffect - On update of weather hook
@@ -43,7 +42,7 @@ const Weather = () => {
     try {
       // Get current weather from weather API
       axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_key}&units=${units}`)
-      .then((response)=>{setWeather({...response.data}); console.log('Response', response.data)})}
+      .then((response)=>{setWeather({...response.data}); console.log('Current Response', response.data)})}
     catch (error) {
       console.log(error)}
   }
@@ -60,11 +59,9 @@ const Weather = () => {
         <h1>Weather</h1>
         <div>Display Weather</div>
           <div>
-            <Current weather={weather} setWeather={setWeather}/>
+            <Current weather={weather} setWeather={setWeather} getWeather={getWeather}/>
             <Forecast forecast={forecast} setForecast={setForecast}/>
           </div>
-          <button onClick={getWeather}>Refresh Current</button>
-          <button onClick={getWeather}>Refresh Forecast</button>
         </div>
       }
     </div>
