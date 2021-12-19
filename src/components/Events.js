@@ -22,7 +22,7 @@ const Events = () => {
         <label htmlFor='date'>Date:</label>
         <input type='date' name='date' value={date} onChange={(e)=>{setDate(e.target.value)}}/>
         <label htmlFor='description'>Description:</label>
-        <textarea rows='10' name='description' value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
+        <textarea className='eventDescription' rows='10' cols='30' name='description' value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
         <input type='submit' value='Add event'/>
       </form>
     </div>

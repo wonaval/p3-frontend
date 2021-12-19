@@ -41,6 +41,10 @@ nav span {
 
 }
 
+.eventDescription {
+  resize: none;
+}
+
 
 .footer {
   background-image: url('./background2.jpg');
