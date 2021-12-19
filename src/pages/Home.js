@@ -1,11 +1,8 @@
 // Function imports
-import { useState } from 'react'
 
 // Page/Component imports
-import Signin from '../components/Signin'
-import Signup from '../components/Signup'
-
-// 
+import SignIn from '../components/SignIn'
+import SignUp from '../components/SignUp'
 
 const Home = () => {
   // useState
@@ -15,8 +12,8 @@ const Home = () => {
   return (
     <div className='home'>
       <h1>HOME</h1>
-      <Signup />
-      <Signin />
+      <SignUp />
+      <SignIn />
     </div>
   )
 }

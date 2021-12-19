@@ -6,7 +6,7 @@ import axios from 'axios'
 // useContext import
   import { UserContext } from '../context/UserContext'
 
-const Signin = () => {
+const SignIn = () => {
   // useContext
   const { userState } = useContext(UserContext)
   const [ user, setUser ] = userState
@@ -42,4 +42,4 @@ const Signin = () => {
   )
 }
 
-export default Signin
+export default SignIn
