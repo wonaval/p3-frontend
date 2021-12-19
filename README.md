@@ -2,6 +2,11 @@
 
 ---
 
+Deployment at http://dashboard-wonaval.herokuapp.com/
+
+---
+
+
 ## OVERVIEW
 <p>Personal dashboard that aggregates all the information you need for the day. Contains weather (api), upcoming events/to-do-list, notes section</p>
 
