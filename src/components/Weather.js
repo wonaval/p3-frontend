@@ -11,8 +11,8 @@ import Current from './Current'
 import Forecast from './Forecast'
 
 const Weather = () => {
-  const latitude = env.REACT_APP_LAT
-  const longitude = env.REACT_APP_LONG
+  const latitude = env.REACT_APP_LONG
+  const longitude = env.REACT_APP_LAT
   const api_key = env.REACT_APP_API_KEY
   const units = 'imperial'
 
