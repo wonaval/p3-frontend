@@ -11,8 +11,6 @@ const Current = (props) => {
   return (
     <div>
       <div><h4>Today's Forecast</h4></div>
-      <div><h5>in</h5></div>
-      <div className='cityName'>{props.weather.name}</div>
       { props.weather.weather && props.weather.weather.map((period, i)=>{
         return (
           <div key={i} className='mainCurrent'>

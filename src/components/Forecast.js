@@ -4,12 +4,8 @@ import env from 'react-dotenv'
 import axios from 'axios'
 
 const Forecast = (props) => {
-  // ***** REMOVE BEFORE PRODUCTION *****
-  // Constants for testing weather API
-  const latitude = 42.1713
-  const longitude = -71.0715
-  // ***** REMOVE BEFORE PRODUCTION *****
-
+  const latitude = env.REACT_APP_LAT
+  const longitude = env.REACT_APP_LONG
   const api_key = env.REACT_APP_API_KEY
   const units = 'imperial'
   const dayNames = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ]
