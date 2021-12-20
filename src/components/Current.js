@@ -1,3 +1,5 @@
+import '../App.css'
+
 const Current = (props) => {
 
   // Timestamp conversion
@@ -15,12 +17,13 @@ const Current = (props) => {
             <div>{props.weather.name}</div>
             <div>{period.main}</div>
             <div>"{period.description.charAt(0).toUpperCase() + period.description.slice(1)}"</div>
-            <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${period.icon}@2x.png`} /></div>
             <div>
-              <div>Temperature: </div>
-              <div className='currentTemp'>Current Temp: {props.weather.main.temp}&#x2109;</div>
-              <div>{props.weather.main.temp_min}&#x2109; / {props.weather.main.temp_max}&#x2109;</div>
-              <div>Low / High</div>
+              <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${period.icon}@2x.png`} /></div>
+                <div>
+                  <div>{props.weather.main.temp_min}&#x2109; / {props.weather.main.temp_max}&#x2109;</div>
+                  <div>Low / High</div>
+                </div>
+              <span className='currentTemp'>{props.weather.main.temp}&#x2109;</span>
             </div>
             <div>Feels like: {props.weather.main.feels_like}&#x2109;</div>
             <div>Humidity: {props.weather.main.humidity}%</div>
