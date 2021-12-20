@@ -84,11 +84,11 @@ Deployment at http://dashboard-wonaval.herokuapp.com/
 ---
 
 ## MVP CHECKLIST
-- [ ] Create user
-- [ ] Login/logout user
-- [ ] Update account information
-- [ ] Pull, display, and reload weather from API
-- [ ] Add, show, delete events
+- [x] Create user
+- [x] Login/logout user
+- [x] Update account information
+- [x] Pull, display, and reload weather from API
+- [x] Add, show, delete events
 
 ---
 
