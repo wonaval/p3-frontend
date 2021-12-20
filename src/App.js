@@ -1,5 +1,6 @@
 // Module imports
-import { useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import env from 'react-dotenv'
 import axios from 'axios'
 
@@ -11,6 +12,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Main from './pages/Main'
 import Footer from './components/Footer'
+import Logo from './components/Logo'
 
 // CSS file
 import './App.css'
@@ -25,7 +27,6 @@ function App() {
   // App functions  // useEffect - On load
   useEffect(()=>{
     fetchUser()
-    // geolocation()
   }, [])
 
   // App functions
@@ -38,30 +39,10 @@ function App() {
     }
   }
 
-  // Confirm is geolocation is allowed
-  const geoConfirm = () => {
-    // Confirms is geolocation is available
-    if ("geolocation" in navigator) {
-      console.log("Geolocation AVAILABLE")
-      
-    } else {
-      console.log("Geolocation NOT AVAILABLE")
-    }
-  }
-
-  // Get longitude and latitude 
-  const getGeo = () => {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude)
-      console.log("Longitude is :", position.coords.longitude)
-    })
-    }
-
   return (
-    <div className="Dashboard">
+    <div className='Dashboard'>
       <Header />
-      <Home />
-      <Main />
+      {user.id ? <Main /> : <Home />}
       <Footer />
     </div>
   );

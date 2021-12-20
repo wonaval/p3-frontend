@@ -1,6 +1,6 @@
 // Module imports
 import { useContext } from 'react'
-import env from 'react-dotenv'
+import { Link } from 'react-router-dom'
 
 // useContext import
 import { UserContext } from '../context/UserContext'
@@ -12,10 +12,11 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <span className='logo'>dashboard</span>
+      <span className='title'>dashboard</span>
         { user.id ?
           <nav>
-            <span>Account</span>
+            <span><Link to='/'>Home</Link></span>
+            <span><Link to='/account'>Account</Link></span>
             <span onClick={()=>{
               localStorage.removeItem('dashboard-token')
               setUser({})
@@ -23,9 +24,9 @@ const Header = () => {
           </nav>
         :
           <nav>
-              <span>Home</span>
-              <span>Sign up</span>
-              <span>Sign in</span>
+          <span><Link to='/'>Home</Link></span>
+              <span><Link to='/signup'>Sign up</Link></span>
+              <span><Link to='/signin'>Sign in</Link></span>
           </nav>
         }
     </div>
