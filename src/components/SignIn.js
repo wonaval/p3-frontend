@@ -37,7 +37,7 @@ const SignIn = () => {
           <input type='password' className='signInput' name='first' placeholder='Password...'  value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
           <input type='submit' className='signButton' value='Sign in'/>
         </form> 
-        <a href='/signup'>Don't have an account? Sign up</a>
+        <a href='/signup' className='linkBlue'>Don't have an account? Sign up</a>
       </div>
     </div>
   )

@@ -296,3 +296,8 @@ nav span {
 .cancel {
   margin-top: 10px;
 }
+
+.linkBlue {
+  text-decoration: none;
+  color: #00719c;
+}

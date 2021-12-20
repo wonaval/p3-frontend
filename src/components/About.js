@@ -1,3 +1,5 @@
+
+import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <div className='about'>
@@ -6,7 +8,7 @@ const About = () => {
         dashboard is a simple application that helps you with your day.<br/>
         It will show the upcoming forecast and you can save upcoming tasks or events.
       </div>
-      <input type='button' className='button' value='Get Started'/>
+      <Link to='/signup'><input type='button' className='button' value='Get Started' to='/signup'/></Link>
     </div>
   )
 }
