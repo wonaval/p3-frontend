@@ -49,6 +49,7 @@ const Weather = () => {
 
   return (
     <div className='weather'>
+      <div><span>Long: {}</span><span>Lat:</span></div>
       { loading && weather ?
         <div>
           <h2>Weather</h2>
