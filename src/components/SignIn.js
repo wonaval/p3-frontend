@@ -19,7 +19,7 @@ const SignIn = () => {
   const handleSignin = (e) => {
     try {
       e.preventDefault()
-      axios.post(`${env.REACT_APP_BACKEND_URL}/user/login`, {email: email, password, password})
+      axios.post(`${env.REACT_APP_BACKEND_URL}/user/login`, {email: email, password: password})
       .then((response)=>{setUser(response.data.user); localStorage.setItem('dashboard-token', response.data.user.id)})
     } catch (error) {
       console.log(error.message)
@@ -28,8 +28,8 @@ const SignIn = () => {
 
   return (
     <div className='signin'>
-      <h1>Sign In</h1>
-      <div className='signupForm'>
+      <h2>Sign In</h2>
+      <div className='signinForm'>
         <form onSubmit={handleSignin}>
           <label htmlFor='email'>Email Address:</label>
           <input type='text' name='email' placeholder='Email Address' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>

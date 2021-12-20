@@ -49,15 +49,15 @@ const Weather = () => {
 
   return (
     <div className='weather'>
+      <div><span>Long: {}</span><span>Lat:</span></div>
       { loading && weather ?
         <div>
-          <h1>Weather</h1>
+          <h2>Weather</h2>
           <div>Loading...</div>
         </div>
       :
         <div>
-        <h1>Weather</h1>
-        <div>Display Weather</div>
+        <h2>Weather</h2>
           <div>
             <Current weather={weather} setWeather={setWeather} getWeather={getWeather}/>
             <Forecast forecast={forecast} setForecast={setForecast}/>
