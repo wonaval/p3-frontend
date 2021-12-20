@@ -4,11 +4,24 @@
   /* outline: 1px solid lightgray; */
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+}
+
 .Dashboard {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  font-size: 12px;
 
 }
 
@@ -24,7 +37,7 @@
   box-shadow: 0 2px 6px 0 #fee197;
 }
 
-.logo {
+.title {
   margin-left: 30px;
 }
 
@@ -34,24 +47,32 @@ nav span {
 }
 
 .home {
-
+  border: 1px solid lightgray;
 }
 
 .main {
+  border: 1px solid lightgray;
+}
 
+.signupForm, .signinForm, .eventForm, .accountForm, .locationForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .eventDescription {
   resize: none;
 }
 
-
 .footer {
+
+}
+
+.logo {
   background-image: url('./background2.jpg');
-  background-position: 50px 100px;
-  position: absolute;
-  bottom: 20px;
-  height: 100px;
+  position: relative;
+  height: 100%;
   width: 100%;
 }
 
@@ -65,8 +86,8 @@ nav span {
   margin: 0 auto;
   text-align: right;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 100%;
+  left: 100%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
 }
