@@ -50,7 +50,7 @@ const Update = () => {
     <div className='accountForm'>
     { showUpdate ?
       <div>
-        <input type='button' value='Cancel Account Update' onClick={()=>{setShowUpdate(false)}}/>
+        <input type='button' className='button' value='Cancel Account Update' onClick={()=>{setShowUpdate(false)}}/>
         <h3>Update Account Information:</h3>
         <form onSubmit={handleUpdate}>
           <label htmlFor='first'>First Name: *</label>
@@ -66,24 +66,24 @@ const Update = () => {
           <label htmlFor='password'>Enter current password to apply changes: *</label>
           <input type='password' name='oldPass' placeholder='Current Password' value={oldPass} onChange={(e)=>{setOldPass(e.target.value)}} />
           <div>* required fields</div>
-          <input type='submit' value='Update Account'/>
+          <input type='submit' className='button' value='Update Account'/>
         </form>
       </div>
     :
-      <input type='button' value='Update Account Information' onClick={()=>{setShowUpdate(true)}}/>
+      <input type='button' className='button' value='Update Account Information' onClick={()=>{setShowUpdate(true)}}/>
     }
     { showDelete ?
       <div>
-        <input type='button' value='Cancel DELETE ACCOUNT' onClick={()=>{setShowDelete(false)}} />
+        <input type='button' className='button' value='Cancel DELETE ACCOUNT' onClick={()=>{setShowDelete(false)}} />
         <form onSubmit={handleDelete}>
           <label htmlFor='deletePass'>Enter current password to DELETE ACCOUNT: *</label>
           <input type='password' name='deletePass' placeholder='Current Password' value={deletePass} onChange={(e)=>{setDeletePass(e.target.value)}} />
-          <input type='submit' value='DELETE ACCOUNT' />
+          <input type='submit' className='button' value='DELETE ACCOUNT' />
         </form>
       </div>
     :
       <div>
-        <input type='button' value='DELETE ACCOUNT' onClick={()=>{setShowDelete(true)}} />
+        <input type='button' className='button' value='DELETE ACCOUNT' onClick={()=>{setShowDelete(true)}} />
       </div>
     }
   </div>

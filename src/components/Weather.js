@@ -48,6 +48,12 @@ const Weather = () => {
       console.log(error)}
   }
 
+  // Timestamp conversion
+  const convertTimestamp = () => {
+    const timestamp = new Date(weather.dt-weather.timezone) 
+    return `${timestamp.getHours()}:${timestamp.getMinutes()}`
+  }
+
   return (
     <div className='weather'>
       { loading && weather ?
@@ -63,15 +69,16 @@ const Weather = () => {
             <Current weather={weather} setWeather={setWeather} getWeather={getWeather}/>
             { showForecast ?
               <div>
-                <input type='button' value='Hide Forecast' onClick={()=>{setShowForecast(false)}} />
                 <Forecast forecast={forecast} setForecast={setForecast}/>
+                <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowForecast(false)}}/>
               </div>
             :
               <div>
-                <input type='button' value='Show Forecast' onClick={()=>{setShowForecast(true)}} />
+              <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowForecast(true)}}/>
               </div>
             }
           </div>
+          <div className='smallText'>Weather data last updated at {convertTimestamp()}</div>
         </div>
       }
     </div>

@@ -13,6 +13,10 @@ h1 {
   height: 50px;
 }
 
+h2 {
+  margin-bottom: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -26,7 +30,14 @@ a, .link{
 }
 
 .button {
-
+  height: 40px;
+  background-color: #00719c;
+  border: 1px solid black;
+  color: white;
+  border-radius: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 300px;
 }
 
 .Dashboard {
@@ -37,6 +48,21 @@ a, .link{
 
   font-size: 14px;
 
+}
+
+.down {
+  width: 40px;
+  cursor: pointer;
+}
+
+.up {
+  width: 40px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.x {
+  width: 20px;
 }
 
 .header {
@@ -62,7 +88,7 @@ nav span {
   cursor: pointer;
 }
 
-.home, .home, .account {
+.home, .main, .account {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +121,7 @@ nav span {
 
 .signup, .signin {
   border: 1px solid black;
+  border-radius: 5px;
   width: 300px;
   height: 450px;
   padding: 25px;
@@ -103,6 +130,7 @@ nav span {
   flex-direction: column;
 
   text-align: left;
+  box-shadow: 2px 2px 6px grey;
 }
 
 .signupForm, .signinForm {
@@ -126,15 +154,123 @@ nav span {
 }
 
 /* WEATHER */
+/* CURRENT */
+.greeting, .weather, .events, .account {
+  width: 800px;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px grey;
+  padding: 5px;
+}
 
+.mainCurrent {
+  width: 800px;
+}
 
+.currentLeft {
+  display: flex;
+  flex-direction: row;
 
+  justify-content: center;
+}
 
+.currentIcon {
+  width: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cityName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.textTemp {
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.miscInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.currentTemp {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.minmaxTemp {
+  font-weight: bold;
+}
+
+/* FORECAST */
+
+.fiveHeader {
+  margin: 20px 0 10px 0;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dayDiv {
+  width: 200px;
+}
 
 /* EVENTS */
 
+.eventInput {
+  padding: 0;
+  padding-left: 10px;
+  border: 0;
+  border-bottom: 1px solid lightgray;
+  height: 20px;
+  line-height: 14px;
+  margin: 0;  
+}
+
 .eventDescription {
   resize: none;
+  padding: 0;
+  padding-left: 10px;
+  border: 0;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  height: 20px;
+  line-height: 14px;
+  margin: 0;
+  height: 100px;
+}
+
+.listMain {
+  margin-bottom: 10px;
+}
+
+.eventAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.eventForm {
+  width: 300px;
+  padding: 25px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  text-align: left;
 }
 
 .deleteEvent {
@@ -142,15 +278,17 @@ nav span {
 }
 .footer {
   font-size: 10px;
+  margin-top: 10px;
 }
 
-.logo {
-  background-image: url('./background2.jpg');
-  position: relative;
-  height: 100%;
-  width: 0;
-  top: 100%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
+.smallText {
+  font-size: 10px;
+}
+
+.about {
+  width: 800px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 6px grey;
 }
