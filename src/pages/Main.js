@@ -1,5 +1,6 @@
 // Module imports
-import { useState, useEffect } from 'react'
+// import { useState } from 'react' - WIP
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 // Component/page imports
@@ -10,30 +11,29 @@ import Account from '../components/Account'
 
 const Main = () => {
   // useState
-  const [ long, setLong] = useState(0)
-  const [ lat, setLat] = useState(0)
-
+  // const [ long, setLong] = useState(0) // - WIP
+  // const [ lat, setLat] = useState(0) // - WIP
 
   // useEffect
   useEffect(()=>{
-
+    // geoConfirm() // WIP
   }, [])
 
   // Page functions
   // Confirm is geolocation is allowed
-  const geoConfirm = () => {
+  // const geoConfirm = () => {
     // Confirms is geolocation is available
-    if ('geolocation' in navigator) {
-      console.log('Geolocation AVAILABLE')
+    // if ('geolocation' in navigator) {
+      // console.log('Geolocation AVAILABLE')
       // Get long and latitude
-      navigator.geolocation.getCurrentPosition(function(position) {
-        setLong(position.coords.latitude)
-        setLat(position.coords.longitude)
-      }, function(err) {console.log(`ERROR(${err.code}): ${err.message}`)})
-    } else {
-      console.log('Geolocation NOT AVAILABLE')
-    }
-  }
+  //     navigator.geolocation.getCurrentPosition(function(position) {
+  //       setLong(position.coords.latitude)
+  //       setLat(position.coords.longitude)
+  //     }, function(err) {console.log(`ERROR(${err.code}): ${err.message}`)})
+  //   } else {
+  //     console.log('Geolocation NOT AVAILABLE')
+  //   }
+  // }
 
   return (
     <div className='main'>

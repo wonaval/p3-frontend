@@ -6,7 +6,6 @@ import axios from 'axios'
 // useContext import
 import { UserContext } from '../context/UserContext'
 
-
 const Events = () => {
   // useContext
   const { userState } = useContext(UserContext)
@@ -25,7 +24,7 @@ const Events = () => {
     getEvents()
   }, [])
 
-  // Component functions
+  // Component Functions
   // Get events from backend
   const getEvents = () => {
     const userId = localStorage.getItem('dashboard-token')
@@ -66,12 +65,6 @@ const Events = () => {
     setDescription('')
   }
 
-  // Convert datetime
-  const convertDate = (date) => {
-    const newDate = new Date(date)
-    return date
-  }
-
   return (
     <div className='events'>
       <h2>Upcoming Events/Tasks</h2>
@@ -83,10 +76,10 @@ const Events = () => {
               <div className='eventTitle'><h3>{event.title}</h3></div>
                 <div className='eventDetails'>
                   { event.location ? <span>at {event.location}</span> : null }
-                  { event.date ? <span> on {convertDate(event.date)}</span> : null }
+                  { event.date ? <span> on {event.date}</span> : null }
                 </div>
                 <div className=''>{event.description}</div>
-                <div><span className='deleteEvent' onClick={(e)=>{deleteEvent(event.id)}}><img src='../images/x-icon.png' className='x'/></span></div>
+                <div><span className='deleteEvent' onClick={(e)=>{deleteEvent(event.id)}}><img src='../images/x-icon.png' className='x' alt={`Delete icon for ${i}`}/></span></div>
               </div>
             )})}
         </div>
@@ -109,11 +102,11 @@ const Events = () => {
                 <input type='submit' className='button' value='Add Event/Task'/>
             </form>
           </div>
-          <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowAdd(false)}}/>
+          <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowAdd(false)}} alt='Up collapse arrow'/>
         </div>
         :
         <div>
-        <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowAdd(true)}}/>
+        <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowAdd(true)}} alt='Down expand arrow'/>
         </div>
       }
         

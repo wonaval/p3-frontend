@@ -6,14 +6,7 @@ import About from '../components/About'
 import SignIn from '../components/SignIn'
 import SignUp from '../components/SignUp'
 
-// useContext
-
-
 const Home = () => {
-  // useState
-  // useEffect
-  // Functions
-
   return (
     <div className='home'>
       <Routes>

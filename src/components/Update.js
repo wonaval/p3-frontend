@@ -1,5 +1,5 @@
 // Module imports
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import env from 'react-dotenv'
 import axios from 'axios'
 
@@ -22,9 +22,8 @@ const Update = () => {
   const [ showUpdate, setShowUpdate ] = useState(false)
   const [ showDelete, setShowDelete ] = useState(false)
 
-  // useEffect
-
-  // Update account on backend
+  // Component Functions
+  // Update account request
   const handleUpdate = (e) => {
     try {
       e.preventDefault()
@@ -37,6 +36,7 @@ const Update = () => {
     catch (error) {console.log(error)}
   }
   
+  // Delete account request
   const handleDelete = (e) => {
     try {
       e.preventDefault()

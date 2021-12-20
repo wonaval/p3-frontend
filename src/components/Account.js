@@ -1,5 +1,5 @@
 // Module imports
-import { useState, useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 
 // useContext import
 import { UserContext } from '../context/UserContext'
@@ -12,15 +12,9 @@ const Account = () => {
   const { userState } = useContext(UserContext)
   const [ user, setUser ] = userState
 
-  // useState
-  const [ location, setLocation ] = useState('')
-
   // useEffect - On load
   useEffect(()=>{
   }, [])
-
-  // Page Functions
-
 
   return (
     <div className='account'>

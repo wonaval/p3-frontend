@@ -1,13 +1,7 @@
+// CSS Style import
 import '../App.css'
 
 const Current = (props) => {
-
-  // Timestamp conversion
-  const convertTimestamp = () => {
-    const timestamp = new Date(props.weather.dt-props.weather.timezone) 
-    return `${timestamp.getHours()}:${timestamp.getMinutes()}`
-  }
-
   return (
     <div>
       <div><h4>Today's Forecast</h4></div>
@@ -16,7 +10,7 @@ const Current = (props) => {
           <div key={i} className='mainCurrent'>
             <div className='currentLeft'>
               <div className='currentIcon'>
-                <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${period.icon}@2x.png`} /></div>
+                <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${period.icon}@2x.png`} alt={`Weather Icon ${i}`}/></div>
                 <div>{period.main}</div>
                 <div>"{period.description.charAt(0).toUpperCase() + period.description.slice(1)}"</div>
               </div>

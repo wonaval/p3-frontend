@@ -66,11 +66,11 @@ const Weather = () => {
             { showForecast ?
               <div>
                 <Forecast forecast={forecast} setForecast={setForecast}/>
-                <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowForecast(false)}}/>
+                <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowForecast(false)}} alt='Up collapse arrow icon'/>
               </div>
             :
               <div>
-              <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowForecast(true)}}/>
+              <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowForecast(true)}} alt='Down expand arrow icon'/>
               </div>
             }
           </div>

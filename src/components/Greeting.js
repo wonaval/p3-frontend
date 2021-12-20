@@ -17,6 +17,8 @@ const Greeting = () => {
     getDate()
   }, [])
 
+  // Component Functions
+  // Today is ... string generation function
   const getDate = () => {
     // Generate today's date
     const newDate = new Date()
@@ -50,8 +52,6 @@ const Greeting = () => {
     const outputDate = `${day} ${monthString} ${date}${suffix}, ${newDate.getFullYear()}`
     setDate(outputDate)
   }
-
-
 
   return (
     <div className='greeting'>
