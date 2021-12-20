@@ -73,9 +73,8 @@ const Events = () => {
 
   return (
     <div className='events'>
-      <h2>Events</h2>
+      <h2>Upcoming Events/Tasks</h2>
       <div className='list'>
-        <div>Event List</div>
         <div>
           { events && events.map((event, i)=>{
             return (

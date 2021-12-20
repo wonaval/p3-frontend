@@ -21,12 +21,13 @@ const Weather = () => {
   const units = 'imperial'
 
   // useContext
-  const { loadingState } = useContext(UserContext)
+  const { userState, loadingState } = useContext(UserContext)
   const [ loading, setLoading ] = loadingState
 
   // useState
   const [ weather, setWeather ] = useState({})
   const [ forecast, setForecast ] = useState([])
+  const [ showForecast, setShowForecast ] = useState(false)
 
   // useEffect - On load
   useEffect(()=>{
@@ -49,7 +50,6 @@ const Weather = () => {
 
   return (
     <div className='weather'>
-      <div><span>Long: {}</span><span>Lat:</span></div>
       { loading && weather ?
         <div>
           <h2>Weather</h2>
@@ -59,8 +59,18 @@ const Weather = () => {
         <div>
         <h2>Weather</h2>
           <div>
+            
             <Current weather={weather} setWeather={setWeather} getWeather={getWeather}/>
-            <Forecast forecast={forecast} setForecast={setForecast}/>
+            { showForecast ?
+              <div>
+                <input type='button' value='Hide Forecast' onClick={()=>{setShowForecast(false)}} />
+                <Forecast forecast={forecast} setForecast={setForecast}/>
+              </div>
+            :
+              <div>
+                <input type='button' value='Show Forecast' onClick={()=>{setShowForecast(true)}} />
+              </div>
+            }
           </div>
         </div>
       }

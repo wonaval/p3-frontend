@@ -22,7 +22,7 @@ const Greeting = () => {
     const newDate = new Date()
     // Get numeric month then convert to string
     const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August','September', 'October', 'November', 'December' ]
-    const monthString = monthNames[newDate.getMonth()-1]
+    const monthString = monthNames[newDate.getMonth()]
     // Get numeric date
     const date = newDate.getDate()
     // Get day string

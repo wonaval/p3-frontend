@@ -37,10 +37,10 @@ const Main = () => {
 
   return (
     <div className='main'>
-      <h1>MAIN</h1>
       <Routes>
-        <Route path='/' element={<div><Greeting /><Weather /><Events /></div>}></Route>
-        <Route path='/account' element={<Account />}></Route>
+        <Route path='*' element={<div><Greeting /><Weather /><Events /></div>} />
+        <Route path='/' element={<div><Greeting /><Weather /><Events /></div>} />
+        <Route path='/account' element={<Account />} />
       </Routes>
     </div>
   )

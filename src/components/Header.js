@@ -17,7 +17,7 @@ const Header = () => {
           <nav>
             <span><Link to='/'>Home</Link></span>
             <span><Link to='/account'>Account</Link></span>
-            <span onClick={()=>{
+            <span className='link' onClick={()=>{
               localStorage.removeItem('dashboard-token')
               setUser({})
             }}>Sign out</span>

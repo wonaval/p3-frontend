@@ -6,6 +6,9 @@ import About from '../components/About'
 import SignIn from '../components/SignIn'
 import SignUp from '../components/SignUp'
 
+// useContext
+
+
 const Home = () => {
   // useState
   // useEffect
@@ -13,12 +16,10 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <h1>HOME</h1>
-
       <Routes>
         <Route path='*' element={<About />} />
         <Route path='/' element={<About />} />
-        <Route path='/signin' element={<SignIn />} /> 
+        <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
     </div>
