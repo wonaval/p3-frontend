@@ -44,7 +44,9 @@
   "react-dotenv": {
     "whitelist": [
       "REACT_APP_BACKEND_URL",
-      "REACT_APP_API_KEY"
+      "REACT_APP_API_KEY",
+      "REACT_APP_LONG",
+      "REACT_APP_LAT"
     ]
   },
   "homepage": "",

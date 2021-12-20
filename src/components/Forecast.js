@@ -28,7 +28,6 @@ const Forecast = (props) => {
       // Get current weather from weather API
       axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${api_key}&units=${units}`)
       .then((response)=>{props.setForecast([...response.data.list.filter((item)=>{return (item.dt_txt.slice(-8) === '12:00:00' && String(item.dt_txt.slice(8, 10)) !== String(date))})])})
-      .then(()=>{console.log('Forecast', props.forecast)})
     }
       // Really dense function above! Fetches 5 day forecast and based upon the forecast date string in the json it filters only the forecasts at 12:00PM and removes the forecast for today since it is already displayed in the current forecast component
     catch (error) {

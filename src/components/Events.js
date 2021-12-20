@@ -33,7 +33,7 @@ const Events = () => {
       try {
       const userId = localStorage.getItem('dashboard-token')
       axios.get(`${env.REACT_APP_BACKEND_URL}/event`, {headers: {Authorization: userId}})
-        .then((response)=>{setEvents([...response.data.event]); console.log('Event response', response.data)})
+        .then((response)=>{setEvents([...response.data.event])})
     } catch (error) {console.log(error)}}
   }
   
