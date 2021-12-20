@@ -6,6 +6,11 @@
 
 h1, h2, h3, h4, h5 {
   margin: 0;
+  text-align: center;
+}
+
+h1 {
+  height: 50px;
 }
 
 form {
@@ -15,13 +20,22 @@ form {
   width: 300px;
 }
 
+a, .link{
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+
+}
+
 .Dashboard {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
-  font-size: 12px;
+  font-size: 14px;
 
 }
 
@@ -32,13 +46,15 @@ form {
   justify-content: space-between;
   align-items: center;
 
-  background-color: #e6b15d;
-  border-bottom: 1px solid #fee197;
-  box-shadow: 0 2px 6px 0 #fee197;
+  background-color: #00719c;
+  border-bottom: 1px solid #00415a;
+  box-shadow: 0 1px 6px black;
 }
 
 .title {
   margin-left: 30px;
+  font-size: 30px;
+  color: white;
 }
 
 nav span {
@@ -46,12 +62,60 @@ nav span {
   cursor: pointer;
 }
 
-.home {
-  border: 1px solid lightgray;
+.home, .home, .account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding-top: 20px;
 }
 
-.main {
-  border: 1px solid lightgray;
+/* SIGNUP/SIGNIN/ABOUT */
+
+.signInput {
+  padding: 0;
+  padding-left: 10px;
+  border: 0;
+  border-bottom: 1px solid lightgray;
+  height: 20px;
+  line-height: 14px;
+  margin: 0;
+}
+
+.signButton {
+  height: 40px;
+  background-color: #00719c;
+  border: 1px solid black;
+  color: white;
+  border-radius: 0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signup, .signin {
+  border: 1px solid black;
+  width: 300px;
+  height: 450px;
+  padding: 25px;
+  
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.signupForm, .signinForm {
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.signupForm *, .signinForm * {
+  margin-bottom: 10px;
 }
 
 .signupForm, .signinForm, .eventForm, .accountForm, .locationForm {
@@ -61,6 +125,14 @@ nav span {
   flex-direction: column;
 }
 
+/* WEATHER */
+
+
+
+
+
+/* EVENTS */
+
 .eventDescription {
   resize: none;
 }
@@ -69,26 +141,14 @@ nav span {
   cursor: pointer;
 }
 .footer {
-
+  font-size: 10px;
 }
 
 .logo {
   background-image: url('./background2.jpg');
   position: relative;
   height: 100%;
-  width: 100%;
-}
-
-.text {
-  background-color: white;
-  color: black;
-  font-size: 100px;
-  height: 100px;
-  width: 100%;
-  font-weight: bold;
-  margin: 0 auto;
-  text-align: right;
-  position: absolute;
+  width: 0;
   top: 100%;
   left: 100%;
   transform: translate(-50%, -50%);

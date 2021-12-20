@@ -54,11 +54,11 @@ const Update = () => {
         <h3>Update Account Information:</h3>
         <form onSubmit={handleUpdate}>
           <label htmlFor='first'>First Name: *</label>
-          <input type='text' name='first' placeholder='Update First Name' value={first} onChange={(e)=>{setFirst(e.target.value)}} />
+          <input type='text' className='signInput' name='first' placeholder='Update First Name' value={first} onChange={(e)=>{setFirst(e.target.value)}} />
           <label htmlFor='last'>Last Name:</label>
-          <input type='text' name='last' placeholder='Update Last Name' value={last} onChange={(e)=>{setLast(e.target.value)}} />
+          <input type='text' className='signInput' name='last' placeholder='Update Last Name' value={last} onChange={(e)=>{setLast(e.target.value)}} />
           <label htmlFor='email'>Email Address: *</label>
-          <input type='text' name='email' placeholder='Update Email Address' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+          <input type='text' className='signInput' name='email' placeholder='Update Email Address' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
           <label htmlFor='updateGeo'>Allow dashboard to automatically detemine my location</label>
           <input type='checkbox' id='updateGeo' name='updateGeo' value={location} onChange={(e)=>{setLocation(!location)}} checked={location}/>
           <label htmlFor='newPass'>Update Password:</label>

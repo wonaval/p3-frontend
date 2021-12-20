@@ -5,7 +5,7 @@ import { useState, useContext, useEffect } from 'react'
 import { UserContext } from '../context/UserContext'
 
 // Component/Page imports
-import Update from '../components/Update'
+import Update from './Update'
 
 const Account = () => {
   // useContext
