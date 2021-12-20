@@ -1,9 +1,12 @@
 const About = () => {
   return (
-    <div>
+    <div className='about'>
       <div><h1>Welcome to dashboard!</h1></div>
-      <div>dashboard is a simple application that helps you with your day. It'll show the upcoming forecase and you can save upcoming tasks and events.</div>
-      <input type='button' value='Get Started'/>
+      <div>
+        dashboard is a simple application that helps you with your day.<br/>
+        It will show the upcoming forecast and you can save upcoming tasks or events.
+      </div>
+      <input type='button' className='button' value='Get Started'/>
     </div>
   )
 }

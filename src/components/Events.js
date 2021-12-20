@@ -18,6 +18,7 @@ const Events = () => {
   const [ date, setDate ] = useState('')
   const [ description, setDescription ] = useState('')
   const [ events, setEvents ] = useState([])
+  const [ showAdd, setShowAdd ] = useState(false)
 
   // useEffect - On load
   useEffect(()=>{
@@ -78,33 +79,45 @@ const Events = () => {
         <div>
           { events && events.map((event, i)=>{
             return (
-              <div key={i}>
+              <div key={i} className='listMain'>
               <div className='eventTitle'><h3>{event.title}</h3></div>
                 <div className='eventDetails'>
                   { event.location ? <span>at {event.location}</span> : null }
                   { event.date ? <span> on {convertDate(event.date)}</span> : null }
                 </div>
-                <div className='eventDescription'>{event.description}</div>
-                <div><span className='deleteEvent' onClick={(e)=>{deleteEvent(event.id)}}>X</span></div>
+                <div className=''>{event.description}</div>
+                <div><span className='deleteEvent' onClick={(e)=>{deleteEvent(event.id)}}><img src='../images/x-icon.png' className='x'/></span></div>
               </div>
             )})}
         </div>
       </div>
-      <div><h3>Add Events</h3></div>
-      <div className='eventForm'>
-        <form onSubmit={submitEvent}>
-            <label htmlFor='title'>Title: *</label>
-            <input type='text' name='title' value={title} onChange={(e)=>{setTitle(e.target.value)}}/>
-            <label htmlFor='title'>Location:</label>
-            <input type='text' name='title' value={location} onChange={(e)=>{setLocation(e.target.value)}}/>
-            <label htmlFor='date'>Date:</label>
-            <input type='datetime-local' name='date' value={date} onChange={(e)=>{setDate(e.target.value)}}/>
-            <label htmlFor='description'>Description:</label>
-            <textarea className='eventDescription' rows='10' cols='30' name='description' value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
-            <div>* required fields</div>
-            <input type='submit' value='Add event'/>
-        </form>
-      </div>
+
+      { showAdd ?
+        <div className='eventAdd'>
+          <div><h3>Add Events/Tasks</h3></div>
+          <div className='eventForm'>
+            <form onSubmit={submitEvent}>
+                <label htmlFor='title'>Title: *</label>
+                <input type='text' className='eventInput' name='title' value={title} onChange={(e)=>{setTitle(e.target.value)}}/>
+                <label htmlFor='title'>Location:</label>
+                <input type='text' className='eventInput' name='title' value={location} onChange={(e)=>{setLocation(e.target.value)}}/>
+                <label htmlFor='date'>Date:</label>
+                <input type='datetime-local' className='eventInput' name='date' value={date} onChange={(e)=>{setDate(e.target.value)}}/>
+                <label htmlFor='description'>Description: *</label>
+                <textarea className='eventDescription' rows='10' cols='30' name='description' value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
+                <div>* required fields</div>
+                <input type='submit' className='button' value='Add Event/Task'/>
+            </form>
+          </div>
+          <img src='../images/arrow.jpg'className='up' onClick={()=>{setShowAdd(false)}}/>
+        </div>
+        :
+        <div>
+        <img src='../images/arrow.jpg'className='down' onClick={()=>{setShowAdd(true)}}/>
+        </div>
+      }
+        
+
     </div>
   )
 }

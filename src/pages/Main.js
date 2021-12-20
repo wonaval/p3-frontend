@@ -38,8 +38,8 @@ const Main = () => {
   return (
     <div className='main'>
       <Routes>
-        <Route path='*' element={<div><Greeting /><Weather /><Events /></div>} />
-        <Route path='/' element={<div><Greeting /><Weather /><Events /></div>} />
+        <Route path='*' element={<><Greeting /><Weather /><Events /></>} />
+        <Route path='/' element={<><Greeting /><Weather /><Events /></>} />
         <Route path='/account' element={<Account />} />
       </Routes>
     </div>

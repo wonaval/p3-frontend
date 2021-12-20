@@ -30,7 +30,6 @@ const Account = () => {
         <div>Name: {user.first} {user.last}</div>
         <div>Email Address: {user.email}</div>
         <div>Allowing Geolocation? {`${user.location}`}</div>
-        <div className='locationForm'><button>Refresh Geolocation</button></div>
       </div>
       <Update />
     </div>

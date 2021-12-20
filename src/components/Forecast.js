@@ -44,18 +44,19 @@ const Forecast = (props) => {
 
   return (
     <div>
-      <div>Five-day Forecast</div>
-      { props.forecast && props.forecast.map((item, i)=>{
-        return (
-          <div key={i}>
-            <div>{convertDate(item.dt_txt)}</div>
-            <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} /></div>
-            <div>{item.weather[0].main}</div>
-            <div>{item.main.temp_min}&#x2109; / {item.main.temp_max}&#x2109;</div>
-          </div>
-        )
-      })}
-      <button onClick={getForecast}>Refresh Forecast</button>
+      <div className='fiveHeader'><h4>Five-day Forecast</h4></div>
+        <div className='columns'>
+          { props.forecast && props.forecast.map((item, i)=>{
+            return (
+                <div key={i} className='dayDiv'>
+                  <div className='dayName'>{convertDate(item.dt_txt)}</div>
+                  <div><img className='weatherIcon' src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} /></div>
+                  <div>{item.weather[0].main}</div>
+                  <div>{item.main.temp_min}&#x2109; / {item.main.temp_max}&#x2109;</div>
+                </div>
+            )
+          })}
+        </div>
     </div>
   )
 }
