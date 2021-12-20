@@ -26,7 +26,7 @@ const Account = () => {
     <div className='account'>
       <h2>Account settings</h2>
       <div className='currentAccount'>
-        <h3>Current Account Information:</h3>
+        <h3>Account Information:</h3>
         <div>Name: {user.first} {user.last}</div>
         <div>Email Address: {user.email}</div>
         <div>Allowing Geolocation? {`${user.location}`}</div>

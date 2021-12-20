@@ -52,22 +52,26 @@ const Update = () => {
       <div>
         <input type='button' className='button' value='Cancel Account Update' onClick={()=>{setShowUpdate(false)}}/>
         <h3>Update Account Information:</h3>
+        <div className='eventForm'>
         <form onSubmit={handleUpdate}>
-          <label htmlFor='first'>First Name: *</label>
-          <input type='text' className='signInput' name='first' placeholder='Update First Name' value={first} onChange={(e)=>{setFirst(e.target.value)}} />
+          <label htmlFor='first'>First Name:</label>
+          <input type='text' className='signInput' name='first' placeholder='First Name...' value={first} onChange={(e)=>{setFirst(e.target.value)}} />
           <label htmlFor='last'>Last Name:</label>
-          <input type='text' className='signInput' name='last' placeholder='Update Last Name' value={last} onChange={(e)=>{setLast(e.target.value)}} />
-          <label htmlFor='email'>Email Address: *</label>
-          <input type='text' className='signInput' name='email' placeholder='Update Email Address' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
-          <label htmlFor='updateGeo'>Allow dashboard to automatically detemine my location</label>
-          <input type='checkbox' id='updateGeo' name='updateGeo' value={location} onChange={(e)=>{setLocation(!location)}} checked={location}/>
+          <input type='text' className='signInput' name='last' placeholder='Last Name...' value={last} onChange={(e)=>{setLast(e.target.value)}} />
+          <label htmlFor='email'>Email Address:</label>
+          <input type='text' className='signInput' name='email' placeholder='Email Address...' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
           <label htmlFor='newPass'>Update Password:</label>
-          <input type='password' name='newPass' placeholder='Update Password' value={newPass} onChange={(e)=>{setNewPass(e.target.value)}} />
-          <label htmlFor='password'>Enter current password to apply changes: *</label>
-          <input type='password' name='oldPass' placeholder='Current Password' value={oldPass} onChange={(e)=>{setOldPass(e.target.value)}} />
+          <input type='password' className='signInput' name='newPass' placeholder='New Password...' value={newPass} onChange={(e)=>{setNewPass(e.target.value)}} />
+            <label htmlFor='allowGeo'>
+              <input type='checkbox' className='required' defaultChecked={location} onChange={()=>{setLocation(!location)}} />
+              Allow dashboard to determine my location
+            </label>
+          <label htmlFor='password' className='cancel'>Enter current password to apply changes:</label>
+          <input type='password' className='signInput' name='oldPass' placeholder='Current Password...' value={oldPass} onChange={(e)=>{setOldPass(e.target.value)}} />
           <div>* required fields</div>
           <input type='submit' className='button' value='Update Account'/>
         </form>
+        </div>
       </div>
     :
       <input type='button' className='button' value='Update Account Information' onClick={()=>{setShowUpdate(true)}}/>
@@ -76,8 +80,8 @@ const Update = () => {
       <div>
         <input type='button' className='button' value='Cancel DELETE ACCOUNT' onClick={()=>{setShowDelete(false)}} />
         <form onSubmit={handleDelete}>
-          <label htmlFor='deletePass'>Enter current password to DELETE ACCOUNT: *</label>
-          <input type='password' name='deletePass' placeholder='Current Password' value={deletePass} onChange={(e)=>{setDeletePass(e.target.value)}} />
+          <label htmlFor='deletePass' className='cancel'>Enter current password to DELETE ACCOUNT:</label>
+          <input type='password' className='signInput' name='deletePass' placeholder='Current Password...' value={deletePass} onChange={(e)=>{setDeletePass(e.target.value)}} />
           <input type='submit' className='button' value='DELETE ACCOUNT' />
         </form>
       </div>
